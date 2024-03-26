@@ -11,12 +11,10 @@ class Multiply:
 
 
 class MinusMultiply(Minus, Multiply):
-    def __init__(self, num_1, num_2):
-        self.__num_1 = num_1
-        self.__num_2 = num_2
+    pass
 
 
 # класс работающего студента
-number = MinusMultiply(2,3)
+number = MinusMultiply()
 number.minus(2,3)
 number.multiply(2,3)
