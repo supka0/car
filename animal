@@ -1,0 +1,25 @@
+class Animal:
+
+    def __init__(self, name, age):
+        self.__name = name  # имя
+        self.__age = age  # возрас
+
+    @property
+    def name(self):
+        return self.__name
+
+    def display_info(self):
+        print(f"Name: {self.__name} ")
+
+
+
+class Dog(Animal):
+
+    def say(self):
+        print(f"{self.name} Woof woof")
+
+
+Bob = Animal("Bob")
+print(Bob.name)
+Bob.display_info()
+Bob.Dog()
