@@ -1,0 +1,98 @@
+class Сar:
+    def __init__(self, name, age, capacity, car_body, maximum_speed, price):
+        self.__name = name  # устанавливаем название машины
+        self.__age = age  # устанавливаем возраст машины
+        self.__capacity = capacity  # устанавливаем вместимость двигателя
+        self.__car_body = car_body  # устанавливаем вместимость двигателя
+        self.__maximum_speed = maximum_speed  # устанавливаем вместимость двигателя
+        self.__price = price  # устанавливаем цену
+
+    # свойство-геттер
+    @property
+    def age(self):
+        return self.__age
+
+    # свойство-сеттер
+    @age.setter
+    def age(self, age):
+        if 0 < age < 100:
+            self.__age = age
+        else:
+            print("Недопустимый возраст")
+
+
+    @property
+    def capacity(self):
+        return self.__capacity
+
+    # свойство-сеттер
+    @capacity.setter
+    def age(self, capacity):
+        if 0 < capacity < 100:
+            self.__capacity = capacity
+        else:
+            print("Недопустимый объём двигателя")
+
+
+
+    @property
+    def car_body(self):
+        return self.__car_body
+
+    # свойство-сеттер
+    @car_body.setter
+    def age(self, car_body):
+        cnt_car_body = 0
+        list_car_body = ["Хетчбэк", "Седан", "Лифтбэк", "Универсал", "Купе", "Кроссовер", "Внедорожник", "Минивэн", ]
+        for i in list_car_body:
+            if car_body == i:
+                cnt_car_body += 1
+        if cnt_car_body != 0:
+            self.__car_body = car_body
+        else:
+            print("Недопустимый тип кузова")
+
+
+    @property
+    def maximum_speed(self):
+        return self.__maximum_speed
+
+    # свойство-сеттер
+    @maximum_speed.setter
+    def age(self, maximum_speed):
+        if 0 < maximum_speed < 1288:
+            self.__maximum_speed = maximum_speed
+        else:
+            print("Недопустимая максимальная скорость")
+
+
+    @property
+    def price(self):
+        return self.__price
+
+    # свойство-сеттер
+    @price.setter
+    def price(self, price):
+        if 0 < price:
+            self.__price = price
+        else:
+            print("Недопустимая цена")
+
+
+
+
+    @property
+    def name(self):
+        return self.__name
+
+    def print_car(self):
+        print(f"Название: {self.__name}\tВозраст: {self.__age}\tВместимость двигателя: {self.__capacity}\tТип кузова: {self.__car_body}\tМаксимальная скорость: {self.__maximum_speed}\tЦена: {self.__price}")
+
+
+Lada = Сar("Lada", 399999, 100,"Лифтбэк",999,100)
+Lada.print_car()
+print(Lada.car_body)
+Lada.age = 25
+Lada.print_car()
+
+
